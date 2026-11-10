@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Base</title>
+</head>
+<body>
+
+    <header> 
+        <i><h1 style="color: #7FFFD4;">Bem-vindo ao site!</h1></i>
+        <nav> 
+            <b><a href="/sobre/">Sobre</a> | 
+            <a href="/contato/">Contato</a></b>
+        </nav>
+    </header>
+
+
+    <main>
+        {% block content %}
+        {% endblock %}  
+    </main>
+
+    <footer>
+        <i><b><p style="color: #7FFFD4;">Senac: Recife - 2026. | Feito por: Conrado Vieira.</p></i></b>
+    </footer>
+    
+</body>
+</html>
