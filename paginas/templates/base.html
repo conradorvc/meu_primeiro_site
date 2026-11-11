@@ -1,17 +1,26 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Base</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'estilo.css' %}">
+
+
 </head>
 <body>
 
     <header> 
-        <i><h1 style="color: #7FFFD4;">Bem-vindo ao site!</h1></i>
+        <i><h1 style="color: #ffffff;">Sejam Bem-vindos.</h1></i>
         <nav> 
-            <b><a href="/sobre/">Sobre</a> | 
-            <a href="/contato/">Contato</a></b>
+            <b>
+            <a href="/inicio/">Início</a> 
+            <a href="/sobre/">Sobre</a>  
+            <a href="/contato/">Contato</a>  
+            <a href="/projeto/">Projetos</a>
+            </b>
         </nav>
     </header>
 
@@ -21,8 +30,9 @@
         {% endblock %}  
     </main>
 
+
     <footer>
-        <i><b><p style="color: #7FFFD4;">Senac: Recife - 2026. | Feito por: Conrado Vieira.</p></i></b>
+        <i><b><p style="color: #ffffff;">Recife - 2026. | Criador: Conrado Vieira.</p></i></b>
     </footer>
     
 </body>

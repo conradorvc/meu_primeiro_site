@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Meus Projetos:</h1>
+    <ul>
+        {% for item in projeto %}
+            <i><li class = "cartao">{{ item }}</li></i>
+        {% endfor %}
+    </ul>
+
+      <a href='/inicio/'>Volte para o Início</a>
+{% endblock %}
