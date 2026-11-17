@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Minhas Categorias:</h1>
+    <ul>
+        {% for item in categorias %}
+            <li class="cartao">
+                <h2><strong>{{ item.nome }}</strong></h2>
+                
+                <hr style="border: 0; border-top: 1px solid white; margin: 10px 0;">
+                
+                <p><strong>Projetos desta categoria:</strong></p>
+                <ul>
+                    {% for proj in item.projeto_set.all %}
+                        <li>{{ proj.nome }} ({{ proj.ano }})</li>
+                    {% empty %}
+                        <li>Nenhum projeto cadastrado nesta categoria ainda.</li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

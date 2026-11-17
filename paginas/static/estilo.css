@@ -1,43 +1,58 @@
 
-body { font-family: Courier; margin: 10px; }
+body { 
+    font-family: Courier; 
+    margin: 10px; 
+    text-align: center; /* Centraliza os textos gerais da página */
+}
 
 header { 
     background: #073599;
-    color: #fdfcfd; padding: 10px; border: 5px; solid #black; 
-                
+    color: #fdfcfd; 
+    padding: 10px; 
+    border: 5px solid black; 
 }
 
-nav a { color: #fdfcfd; }
-
+/* Unificamos os estilos do menu para evitar duplicação */
 nav a {
     background-color: #6e98f3;
     color: #ffffff;
     padding: 6px 12px;
     border-radius: 6px;
     margin-right: 6px; 
+    text-decoration: none;
 }
+
 nav a:hover {
     background-color: rgb(1, 187, 255);
 }
 
 footer { 
     background: #073599;
-    color: rgba(1, 42, 70, 0.897); margin-top: 80px; padding: 10px;
+    color: rgba(1, 42, 70, 0.897); 
+    margin-top: 80px; 
+    padding: 10px;
+}
+
+/* Centraliza a lista e empilha os cartões organizados no meio */
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os cartões horizontalmente */
 }
 
 .cartao {
-    list-style-type: none;
     background-color: #6e98f3;
     border: 1px solid #ffffff;
     border-radius: 8px;
-    padding: 10px;
-    margin-bottom: 10px;
-    margin-right: 15px;
+    padding: 15px;
+    margin-bottom: 15px;
+    width: 60%;          /* Define uma largura elegante para o cartão */
+    max-width: 600px;    /* Impede que fique largo demais em telas grandes */
     text-align: center;
 }
 
 main {
-    margin-left: 5px;
-    margin-right: 1000px; 
-
+    margin: 20px auto;   /* Remove o excesso da direita e centraliza o bloco */
 }

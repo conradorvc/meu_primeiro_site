@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import filme, projeto
+from .models import Categoria, filme, projeto
 
 def inicio(request):
     contexto = {
@@ -22,6 +22,12 @@ def lista_projetos(request):
         'projetos': projeto.objects.all(),
     }
     return render(request, 'projeto.html', contexto)
+
+def categoria(request):
+    contexto = {
+        'categorias': Categoria.objects.all(),
+    }
+    return render(request, 'categoria.html', contexto)
 
 def lista_filmes(request):
     contexto = {

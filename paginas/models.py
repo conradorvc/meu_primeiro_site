@@ -10,10 +10,23 @@ class filme(models.Model):
     def __str__(self):
         return self.titulo
 
+class Categoria(models.Model):
+    nome = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.nome    
+
 class projeto(models.Model):
     nome = models.CharField(max_length=100)
     descricao = models.TextField()
     ano = models.IntegerField()
+    categoria = models.ForeignKey(
+        Categoria, 
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True
+        
+    )
 
     def __str__(self):
         return self.nome

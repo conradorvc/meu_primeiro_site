@@ -25,4 +25,5 @@ urlpatterns = [
     path('contato/', views.contato),
     path('projeto/', views.lista_projetos),
     path('filmes/', views.lista_filmes),
+    path('categoria/', views.categoria),
 ]
