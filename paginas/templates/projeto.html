@@ -3,10 +3,13 @@
 {% block content %}
     <h1>Meus Projetos:</h1>
     <ul>
-        {% for item in projeto %}
-            <i><li class = "cartao">{{ item }}</li></i>
+        {% for item in projetos %}
+            <i><li class = "cartao">
+                <strong><h2>{{ item.projeto }}</h2></strong>
+                <p>{{ item.descricao }}</p>
+                <p><strong>Data de Criação:</strong> {{ item.data_criacao }}</p>
+            </li></i>
         {% endfor %}
     </ul>
 
-      <a href='/inicio/'>Volte para o Início</a>
 {% endblock %}
