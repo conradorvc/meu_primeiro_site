@@ -16,4 +16,4 @@ class projeto(models.Model):
     ano = models.IntegerField()
 
     def __str__(self):
-        return self.nome    
+        return self.nome

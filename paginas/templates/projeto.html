@@ -4,12 +4,11 @@
     <h1>Meus Projetos:</h1>
     <ul>
         {% for item in projetos %}
-            <i><li class = "cartao">
-                <strong><h2>{{ item.projeto }}</h2></strong>
+            <li class="cartao">
+                <h2><strong>{{ item.nome }}</strong></h2>
                 <p>{{ item.descricao }}</p>
-                <p><strong>Data de Criação:</strong> {{ item.data_criacao }}</p>
-            </li></i>
+                <p><strong>Ano:</strong> {{ item.ano }}</p>
+            </li>
         {% endfor %}
     </ul>
-
 {% endblock %}

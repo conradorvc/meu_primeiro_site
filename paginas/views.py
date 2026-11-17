@@ -1,7 +1,5 @@
 from django.shortcuts import render
-
 from django.http import HttpResponse
-
 from .models import filme, projeto
 
 def inicio(request):
@@ -19,14 +17,14 @@ def sobre(request):
 def contato(request):
     return render(request, 'contato.html')
 
-def projeto(request):
-    projetos = {
-        'projeto': projeto.objects.all(),
+def lista_projetos(request):
+    contexto = {
+        'projetos': projeto.objects.all(),
     }
-    return render(request, 'projeto.html', projetos)
+    return render(request, 'projeto.html', contexto)
 
-def filmes(request):
-    filmes = {
-        'filme': filme.objects.all(),
+def lista_filmes(request):
+    contexto = {
+        'filmes': filme.objects.all(),
     }
-    return render(request, 'filmes.html', filmes)
+    return render(request, 'filmes.html', contexto)

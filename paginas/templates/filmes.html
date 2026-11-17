@@ -4,14 +4,13 @@
     <h1>Meus Filmes:</h1>
     <ul>
         {% for item in filmes %}
-            <i><li class = "cartao">
-                <strong><h2>{{ item.filme }}</h2></strong>
+            <li class="cartao">
+                <h2><strong>{{ item.titulo }}</strong></h2>
                 <p><strong>Ano:</strong> {{ item.ano }}</p>
                 <p><strong>Gênero:</strong> {{ item.genero }}</p>
-                <p><strong>Nota:</strong> {{ item.nota }}</p>   
+                <p><strong>Nota:</strong> {{ item.nota }}</p>
                 <p><strong>Autor:</strong> {{ item.autor }}</p>
-
-            </li></i>
+            </li>
         {% endfor %}
     </ul>
 {% endblock %}
