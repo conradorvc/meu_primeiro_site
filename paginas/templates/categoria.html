@@ -2,6 +2,7 @@
 
 {% block content %}
     <h1>Minhas Categorias:</h1>
+    <a href="{% url 'nova_categoria' %}">+ Nova Categoria</a>
     <ul>
         {% for item in categorias %}
             <li class="cartao">

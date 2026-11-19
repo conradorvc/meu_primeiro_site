@@ -2,6 +2,9 @@
 
 {% block content %}
     <h1>Meus Projetos:</h1>
+    <a href="{% url 'novo_projeto' %}">+ Novo projeto</a>
+
+
     <ul>
         {% for item in projetos %}
             <li class="cartao">
